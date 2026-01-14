@@ -10,17 +10,17 @@ export default ts.config(
   {
     languageOptions: {
       globals: { ...globals.node },
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
     },
   },
   {
     rules: {
-      "@typescript-eslint/consistent-type-imports": [
-        "error",
-        { prefer: "type-imports", fixStyle: "inline-type-imports" },
-      ],
+      "@typescript-eslint/consistent-type-imports": ["error", { prefer: "type-imports", fixStyle: "inline-type-imports" }],
       "@typescript-eslint/no-explicit-any": "off",
     },
   },
   { ignores: ["dist/*", "node_modules/*"] },
 )
-
