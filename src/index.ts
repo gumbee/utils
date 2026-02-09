@@ -1,3 +1,5 @@
 export { clamp } from "./math"
 export { log, logError, logWarn } from "./log"
 export { Emitter } from "./events"
+export { debounce, throttle } from "./timing"
+export type { DebouncedFunction, ThrottledFunction } from "./timing"
