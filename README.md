@@ -7,26 +7,37 @@
 
 </div>
 
-@gumbee/utils is a collection of shared utilities designed primarily for the [Gumbee](https://github.com/Gumbee/gumbee) ecosystem. It provides essential helpers for logging, math operations, and other common tasks used across Gumbee packages.
+A collection of shared utility helpers for logging, math, and common cross-package tasks in the Gumbee ecosystem.
 
-While this package is intended for internal use within the Gumbee codebase, it is published publicly and can be used in other projects if found useful.
+========================
 
-The canonical source tree and bug trackers are available on [GitHub](https://github.com/Gumbee/gumbee).
-For license information, see [LICENSE](LICENSE) (MIT).
+<div align="left">
+Related Documentation
+
+[Logging](docs/LOGGING.md) •
+[Math](docs/MATH.md) •
+[Timing](docs/TIMING.md)
+
+</div>
+
+## Features
+
+- **Shared Foundations** - Centralized utility functions used across Gumbee packages
+- **Logging Utilities** - Styled console output with owner labels and environment-aware filtering
+- **Math Helpers** - Reusable numeric helpers for common calculations
+- **Timing Helpers** - Debounce, throttle, and sleep utilities for UI and async workflows
+- **Portable by Default** - Published as a standalone package and usable outside Gumbee projects
 
 ## Installation
 
-```bash
-bun add @gumbee/utils
-# npm install @gumbee/utils
-# pnpm add @gumbee/utils
-# yarn add @gumbee/utils
-```
+1. Install `@gumbee/utils`
 
-## Documentation
-
-- [Logging](docs/LOGGING.md) - Styled console logging with colored owner labels and environment-aware filtering.
-- [Math](docs/MATH.md) - Numeric utilities for common calculations.
+   ```bash
+   bun add @gumbee/utils
+   # npm install @gumbee/utils
+   # pnpm add @gumbee/utils
+   # yarn add @gumbee/utils
+   ```
 
 ## Configuration
 
@@ -76,3 +87,7 @@ git push origin main --tags
 ```
 
 The GitHub Actions workflow will automatically build, test, and publish to npm when the tag is pushed.
+
+## License
+
+MIT
