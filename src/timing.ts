@@ -95,15 +95,18 @@ export function throttle<T extends (...args: any[]) => void>(fn: T, delay: numbe
       // Subsequent executions
       if (timeoutId === null) {
         const remaining = delay - (now - lastExecTime)
-        
-        timeoutId = setTimeout(() => {
-          if (latestArgs) {
-            fn(...latestArgs)
-            lastExecTime = Date.now()
-            latestArgs = null
-          }
-          timeoutId = null
-        }, Math.max(0, remaining))
+
+        timeoutId = setTimeout(
+          () => {
+            if (latestArgs) {
+              fn(...latestArgs)
+              lastExecTime = Date.now()
+              latestArgs = null
+            }
+            timeoutId = null
+          },
+          Math.max(0, remaining),
+        )
       }
     }
   }
@@ -130,4 +133,8 @@ export function throttle<T extends (...args: any[]) => void>(fn: T, delay: numbe
   }
 
   return throttled
+}
+
+export function sleep(ms: number): Promise<void> {
+  return new Promise<void>((resolve) => setTimeout(resolve, ms))
 }
